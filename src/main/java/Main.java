@@ -12,6 +12,7 @@ import javafx.stage.Stage;
         @Override
         public void start(Stage primaryStage) {
             primaryStage.setTitle("My First JavaFX App");
+            System.out.println("ok");
 
             Label label = new Label("Hello World, JavaFX !");
             Scene scene = new Scene(label, 400, 200);
