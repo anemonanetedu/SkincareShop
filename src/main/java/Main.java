@@ -1,24 +1,40 @@
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import Services.UserService;
+import Services.FileSystemService;
 
-    public class Main extends Application {
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Objects;
+
+public class Main extends Application {
+
+        @Override
+        public void start(Stage primaryStage) throws Exception {
+            initDirectory();
+            UserService.initDatabase();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Login.fxml")));
+            primaryStage.setTitle("Welcome");
+            primaryStage.setScene(new Scene(root, 725, 490));
+            primaryStage.show();
+        }
+
+        private void initDirectory() {
+
+            Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
+            if (!Files.exists(applicationHomePath))
+                applicationHomePath.toFile().mkdirs();
+        }
+
 
         public static void main(String[] args) {
             launch(args);
         }
-
-        @Override
-        public void start(Stage primaryStage) {
-            primaryStage.setTitle("My First JavaFX App");
-            System.out.println("ok");
-
-            Label label = new Label("Hello World, JavaFX !");
-            Scene scene = new Scene(label, 400, 200);
-            primaryStage.setScene(scene);
-
-            primaryStage.show();
-        }
     }
+
+
 
