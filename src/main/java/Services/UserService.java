@@ -40,7 +40,7 @@ public class UserService {
         checkUserDoesNotAlreadyExist(username);
         UpperCaseExists(password);
         User user=new User(username, encodePassword(username, password), name, email, address, phone);
-        user.setisAdmin();
+        //user.setisAdmin();
         userRepository.insert(user);
 
     }
