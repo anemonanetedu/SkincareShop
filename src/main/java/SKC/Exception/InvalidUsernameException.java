@@ -1,7 +1,5 @@
-package Exception;
+package SKC.Exception;
 
-
-import javafx.scene.text.Text;
 
 public class InvalidUsernameException extends Exception {
 

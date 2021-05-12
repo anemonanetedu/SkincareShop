@@ -1,13 +1,14 @@
 
 
 
-package Services;
+package SKC.Services;
+import SKC.Exception.*;
+import SKC.Model.User;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectRepository;
-import Exception.*;
-import Model.User;
-import Exception.UncompletedFieldsException;
+
+import SKC.Exception.UncompletedFieldsException;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -16,7 +17,7 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static Services.FileSystemService.getPathToFile;
+import static SKC.Services.FileSystemService.getPathToFile;
 
 public class UserService {
 

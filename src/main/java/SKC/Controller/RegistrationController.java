@@ -1,22 +1,19 @@
-package Controller;
+package SKC.Controller;
 
 
+import SKC.Exception.NoUpperCaseException;
+import SKC.Exception.UncompletedFieldsException;
+import SKC.Exception.UsernameAlreadyExistException;
+import SKC.Services.UserService;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import Exception.NoUpperCaseException;
-import Exception.UncompletedFieldsException;
-import Services.UserService;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-import Exception.UsernameAlreadyExistException;
-
-import static Services.UserService.UpperCaseExists;
 
 public class RegistrationController {
 
@@ -60,7 +57,7 @@ public class RegistrationController {
     public void handleLogAction() throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         Stage scene= (Stage) logButton.getScene().getWindow();
-        scene.setScene(new Scene(root,300,490));
+        scene.setScene(new Scene(root,720,490));
         scene.setFullScreen(false);
     }
 }

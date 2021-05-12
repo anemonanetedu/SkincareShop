@@ -1,4 +1,4 @@
-package Exception;
+package SKC.Exception;
 
 public class UsernameAlreadyExistException extends Exception {
 

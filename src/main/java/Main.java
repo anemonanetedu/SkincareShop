@@ -1,11 +1,11 @@
+import SKC.Services.ProduseService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import Services.UserService;
-import Services.FileSystemService;
+import SKC.Services.UserService;
+import SKC.Services.FileSystemService;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,6 +16,7 @@ public class Main extends Application {
         @Override
         public void start(Stage primaryStage) throws Exception {
             initDirectory();
+            ProduseService.initProdusDatabase();
             UserService.initDatabase();
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Login.fxml")));
             primaryStage.setTitle("Welcome");
