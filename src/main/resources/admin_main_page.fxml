@@ -6,7 +6,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane hgap="2" prefHeight="400" prefWidth="600" stylesheets="@style.css" vgap="3" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.admin_main_page">
+<GridPane hgap="2" prefHeight="400" prefWidth="600" stylesheets="@style.css" vgap="3" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SKC.Controller.admin_main_page">
     <TilePane alignment="CENTER" prefHeight="100" prefWidth="200" style="-fx-background-color:LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" GridPane.rowIndex="0">
         <Text id="title-text" text="Admin" textAlignment="CENTER"><font>
             <Font name="Bookman Old Style Bold Italic" size="24.0" />
@@ -21,13 +21,15 @@
 
     </TilePane>
     <HBox alignment="CENTER" spacing="10" GridPane.rowIndex="10" />
-    <HBox alignment="CENTER" spacing="10" GridPane.rowIndex="20">
-        <Button fx:id="butonAdaugareProduseSiPreturi" onAction="#handleProduseSiPreturi" prefHeight="27.0" prefWidth="245.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Editare lista produse si preturi"><font>
+    <HBox alignment="CENTER" spacing="10" GridPane.rowIndex="10">
+        <Button fx:id="butonAdaugareProduseSiPreturi" onAction="#handleAdaugareProduseSiPreturi" prefHeight="27.0" prefWidth="245.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Adauga produse"><font>
             <Font name="System Bold" size="12.0" />
         </font>
         </Button>
     </HBox>
-    <HBox alignment="CENTER" spacing="10" GridPane.rowIndex="30">
+    <HBox alignment="CENTER" spacing="10" GridPane.rowIndex="30" />
+
+    <HBox alignment="CENTER" spacing="10" GridPane.rowIndex="26">
         <Button fx:id="butonVizualizareComenziInAsteptare" onAction="#handleVizualizareListaComenziInAsteptare" prefHeight="27.0" prefWidth="278.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista comenzi in asteptare"><font>
             <Font name="System Bold" size="12.0" />
         </font></Button>

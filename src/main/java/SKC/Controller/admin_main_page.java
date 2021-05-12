@@ -1,5 +1,8 @@
-package Controller;
+package SKC.Controller;
 
+import SKC.Model.User;
+//import com.sun.javafx.tk.quantum.PaintRenderJob;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,13 +10,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import Model.User;
-import Services.UserService;
 
 import java.io.IOException;
 
 
 public class admin_main_page {
+    @FXML
+    private Button butonEditareProduseSiPreturi;
     @FXML
     private Button butonAdaugareProduseSiPreturi;
     @FXML
@@ -22,6 +25,8 @@ public class admin_main_page {
     private Button AcceptareRespingereComanda;
     @FXML
     private Button butonDeconectare;
+    @FXML
+    private Button butonAdaugareServiciiSiPreturi;
     @FXML
     private User user;
     @FXML
@@ -32,16 +37,15 @@ public class admin_main_page {
 
 
     private  String userName;
+
     public  void setUser(User user){
         this.user=user;
     }
 
-
-
     public void handleProduseSiPreturi() throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adaugareserviciisipreturi.fxml"));
-            Stage stage = (Stage) (butonAdaugareProduseSiPreturi.getScene().getWindow());
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adauga_produse.fxml"));
+            Stage stage = (Stage) (butonEditareProduseSiPreturi.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -50,6 +54,8 @@ public class admin_main_page {
             System.out.println("eroare");
         }
     }
+
+
     public void handleVizualizareListaComenziInAsteptare() throws IOException {
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("vizualizarelistaclientiinasteptare.fxml"));
@@ -72,6 +78,19 @@ public class admin_main_page {
         catch (IOException e)
         {
             System.out.println("eroare");
+        }
+    }
+    
+    public void handleAdaugaProduse() throws IOException{
+        try {
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("adauga_produse.fxml"));
+            Stage stage=(Stage) (butonAdaugareProduseSiPreturi.getScene().getWindow());
+            stage.setScene((new  Scene(root)));
+
+        }
+        catch (IOException e)
+        {
+            System.out.println("Error");
         }
     }
     public void handleDeconectare() throws IOException {
@@ -99,4 +118,14 @@ public class admin_main_page {
             registrationMessage.setText("eroare!");
         }
     }
-}
+@FXML
+    public void handleAdaugareProduseSiPreturi() throws IOException {
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("adauga_produse.fxml"));
+            Stage stage = (Stage) (butonAdaugareProduseSiPreturi.getScene().getWindow());
+            stage.setScene(new Scene(root));
+            stage.show();
+
+
+        }
+    }
+
