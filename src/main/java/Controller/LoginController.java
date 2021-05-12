@@ -55,14 +55,14 @@ public class LoginController {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("admin_main_page.fxml"));
                 Stage scene= (Stage) logButton.getScene().getWindow();
                 scene.setTitle("Admin");
-                scene.setScene(new Scene(root,1920,1080));
-                scene.setResizable(false);
-                scene.setMinHeight(1080);
-                scene.setMinWidth(1920);
-                scene.setMaxHeight(1080);
-                scene.setMaxWidth(1920);
-                scene.setTitle("Client");
-                scene.setFullScreen(true);
+                scene.setScene(new Scene(root,720,490));
+                scene.setResizable(true);
+                //scene.setMinHeight(1080);
+                //scene.setMinWidth(1920);
+                //scene.setMaxHeight(1080);
+               //scene.setMaxWidth(1920);
+                //scene.setTitle("Client");
+                //scene.setFullScreen(true);
 
 
             }
@@ -70,14 +70,14 @@ public class LoginController {
             {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_main_page.fxml"));
                 Stage scene= (Stage) logButton.getScene().getWindow();
-                scene.setScene(new Scene(root,1920,1080));
-                scene.setResizable(false);
-                scene.setMinHeight(1080);
-                scene.setMinWidth(1920);
-                scene.setMaxHeight(1080);
-                scene.setMaxWidth(1920);
-                scene.setTitle("Client");
-                scene.setFullScreen(true);
+                scene.setScene(new Scene(root,720,490));
+                scene.setResizable(true);
+              //  scene.setMinHeight(1080);
+               // scene.setMinWidth(1920);
+               // scene.setMaxHeight(1080);
+                //scene.setMaxWidth(1920);
+                //scene.setTitle("Client");
+                //scene.setFullScreen(true);
 
             }
 

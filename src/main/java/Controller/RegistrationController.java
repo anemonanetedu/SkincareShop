@@ -60,7 +60,7 @@ public class RegistrationController {
     public void handleLogAction() throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         Stage scene= (Stage) logButton.getScene().getWindow();
-        scene.setScene(new Scene(root,300,490));
+        scene.setScene(new Scene(root,720,490));
         scene.setFullScreen(false);
     }
 }
