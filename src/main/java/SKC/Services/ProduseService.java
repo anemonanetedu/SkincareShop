@@ -40,6 +40,20 @@ public class ProduseService {
             produse.add(produs.getNume()+" "+produs.getPret()+" "+produs.getTippiele());
         }
     }
+    public static void getProdusePiele(ObservableList<String> produse){
+        for(Produs produs: produsRepository.find()) {
+            if(produs.getTippiele()!=null)
+                produse.add(produs.getTippiele());
+        }
+    }
+
+    public static ArrayList<Produs> getProduseSelectate(String piele){
+        ArrayList<Produs> produse = new ArrayList<>();
+        for(Produs produs : produsRepository.find())
+            if(Objects.equals(piele, produs.getTippiele()))
+            produse.add(produs);
+        return produse;
+    }
 
     public static ArrayList<Produs> getProduse(){
         ArrayList<Produs> produse = new ArrayList<>();

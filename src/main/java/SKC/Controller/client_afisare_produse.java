@@ -4,6 +4,7 @@ import SKC.Model.Produs;
 import SKC.Services.ProduseService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -40,4 +41,6 @@ public class client_afisare_produse {
         Stage stage = (Stage) tabelproduse.getScene().getWindow();
         stage.setScene(new Scene(root));
     }
+
+
 }
