@@ -2,6 +2,7 @@ package SKC.Controller;
 
 //import com.sun.javafx.tk.quantum.PaintRenderJob;
 import SKC.Model.User;
+import SKC.Services.ProduseService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,12 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import javafx.scene.control.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+
+//import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class client_main_page {
@@ -62,9 +69,9 @@ public class client_main_page {
         }
     }
 
-    public void handleVizualizareListaServiciiSiPreturi() throws IOException {
+    public void handleVizualizareListaServiciiSiPreturi(){
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientServiciiPreturi.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_afisare_produse.fxml"));
             Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
@@ -73,6 +80,15 @@ public class client_main_page {
         {
             System.out.println("eroare");
         }
+    }
+    @FXML
+    ListView<String> list1=new ListView<String>();
+    private ObservableList<String> items_list1 = FXCollections.observableArrayList();
+    @FXML
+    public void handleProduse()throws IOException{
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_afisare_produse.fxml"));
+        Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+        stage.setScene(new Scene(root));
     }
 
     public void handleAlegereOptiuneDorita() throws IOException {

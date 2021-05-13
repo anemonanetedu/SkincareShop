@@ -19,32 +19,33 @@
             </InnerShadow>
         </effect>
     </TilePane>
-    <HBox alignment="CENTER" prefHeight="47.0" prefWidth="572.0" spacing="50" GridPane.rowIndex="3">
-        <Button fx:id="buttonCreate" alignment="CENTER" onAction="#handleRegisterAction" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Creare cont nou"><font>
-            <Font name="System Bold" size="12.0" />
-        </font>
-        </Button>
-        <Button fx:id="butonVizualizareListaServiciiSiPreturi" onAction="#handleVizualizareListaServiciiSiPreturi" prefHeight="29.0" prefWidth="358.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista produse si preturi"><font>
-            <Font name="System Bold" size="12.0" />
-        </font>
-        </Button>
-    </HBox>
+    <HBox alignment="CENTER" prefHeight="47.0" prefWidth="572.0" spacing="50" GridPane.rowIndex="3" />
 
 
 
-    <HBox alignment="CENTER" prefHeight="56.0" prefWidth="600.0" spacing="50" GridPane.rowIndex="6">
-        <Button fx:id="butonAlegereAngajat" alignment="CENTER" onAction="#handleAlegereAngajat" prefHeight="51.0" prefWidth="328.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare status comanda" textAlignment="CENTER"><font>
-            <Font name="System Bold" size="12.0" />
-        </font>
-        </Button>
-    </HBox>
+    <HBox alignment="CENTER" prefHeight="56.0" prefWidth="600.0" spacing="50" GridPane.rowIndex="7" />
 
-    <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="581.0" spacing="50" GridPane.rowIndex="52">
-        <Button fx:id="butonDeconectare" onAction="#handleDeconectare" prefHeight="30.0" prefWidth="166.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Deconectare"><font>
-            <Font name="System Bold" size="12.0" />
-        </font>
-        </Button>
-    </HBox>
+    <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="581.0" spacing="50" GridPane.rowIndex="55" />
+     <Button fx:id="butonVizualizareListaServiciiSiPreturi" onAction="#handleProduse" prefHeight="31.0" prefWidth="358.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista produse si preturi" GridPane.rowIndex="4">
+      <font>
+         <Font name="System Bold" size="12.0" />
+     </font>
+     </Button>
+        <Button fx:id="butonAlegereAngajat" alignment="CENTER" onAction="#handleAlegereAngajat" prefHeight="51.0" prefWidth="328.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare status comanda" textAlignment="CENTER" GridPane.rowIndex="6">
+      <font>
+         <Font name="System Bold" size="12.0" />
+     </font>
+     </Button>
+     <Button fx:id="buttonCreate" alignment="CENTER" onAction="#handleRegisterAction" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Creare cont nou" GridPane.rowIndex="1">
+      <font>
+         <Font name="System Bold" size="12.0" />
+     </font>
+     </Button>
+     <Button fx:id="butonDeconectare" onAction="#handleDeconectare" prefHeight="30.0" prefWidth="166.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Deconectare" GridPane.rowIndex="57">
+      <font>
+         <Font name="System Bold" size="12.0" />
+     </font>
+     </Button>
 
 
     <columnConstraints>
@@ -55,6 +56,7 @@
         <RowConstraints maxHeight="153.60000000000002" minHeight="70.60000000000002" prefHeight="91.2" />
         <RowConstraints maxHeight="153.60000000000002" minHeight="62.20000000000002" prefHeight="62.20000000000002" />
         <RowConstraints maxHeight="153.60000000000002" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="12.199999999999989" />
         <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="12.199999999999989" />
         <RowConstraints maxHeight="54.39999999999999" minHeight="0.0" prefHeight="15.0" />
         <RowConstraints maxHeight="49.20000000000002" minHeight="31.400000000000006" prefHeight="32.0" />
@@ -103,10 +105,13 @@
         <RowConstraints />
         <RowConstraints />
         <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
         <RowConstraints maxHeight="19.80000000000001" minHeight="0.0" prefHeight="19.80000000000001" />
-        <RowConstraints maxHeight="31.600000000000023" minHeight="0.0" prefHeight="0.0" />
-        <RowConstraints maxHeight="54.39999999999998" minHeight="0.0" prefHeight="0.0" />
-        <RowConstraints maxHeight="54.39999999999998" minHeight="12.399999999999977" prefHeight="12.800000000000011" />
+      <RowConstraints maxHeight="31.600000000000023" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="54.39999999999998" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="54.39999999999998" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="54.39999999999998" minHeight="12.399999999999977" prefHeight="12.800000000000011" />
     </rowConstraints>
 
 
