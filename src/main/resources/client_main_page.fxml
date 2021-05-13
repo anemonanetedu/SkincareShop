@@ -6,7 +6,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane hgap="2" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color:  BISQUE;" vgap="3" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SKC.Controller.client_main_page">
+<GridPane hgap="2" prefHeight="400.0" prefWidth="572.0" style="-fx-background-color:  BISQUE;" vgap="3" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SKC.Controller.client_main_page">
     <TilePane alignment="CENTER_RIGHT" prefHeight="101.0" prefWidth="572.0" style="-fx-background-color: MOCCASIN; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" GridPane.rowIndex="0">
         <Text id="title-text" text="CLIENT" textAlignment="LEFT" wrappingWidth="318.00002843141556"><font>
             <Font name="Bookman Old Style Bold Italic" size="20.0" />
@@ -46,7 +46,11 @@
          <Font name="System Bold" size="12.0" />
      </font>
      </Button>
-
+   <Button fx:id="cautare" mnemonicParsing="false" onAction="#handleCautare" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Cautare" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+       <font>
+           <Font name="System Bold" size="12.0" />
+       </font>
+   </Button>
 
     <columnConstraints>
         <ColumnConstraints maxWidth="572.0" minWidth="541.0" prefWidth="572.0" />

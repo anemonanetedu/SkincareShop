@@ -128,5 +128,19 @@ public class client_main_page {
             registrationMessage.setText("eroare!");
         }
     }
+
+    public void handleCautare() throws IOException {
+        try{
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("client_cautare_produse.fxml"));
+            Stage stage = (Stage) (buttonCreate.getScene().getWindow());
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch(IOException e){
+            registrationMessage.setText("eroare!");
+        }
+
+
+    }
 }
 
