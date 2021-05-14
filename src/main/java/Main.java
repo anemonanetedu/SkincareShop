@@ -1,3 +1,5 @@
+import SKC.Controller.client_afisare_produse;
+import SKC.Services.CartServices;
 import SKC.Services.ProduseService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,12 +12,13 @@ import SKC.Services.FileSystemService;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Objects;
-
+import SKC.Controller.client_afisare_produse;
 public class Main extends Application {
 
         @Override
         public void start(Stage primaryStage) throws Exception {
             initDirectory();
+            CartServices.initProdusDatabase();
             ProduseService.initProdusDatabase();
             UserService.initDatabase();
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Login.fxml")));

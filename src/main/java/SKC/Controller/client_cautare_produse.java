@@ -1,6 +1,7 @@
 package SKC.Controller;
 
 import SKC.Model.Produs;
+import SKC.Services.CartServices;
 import SKC.Services.ProduseService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -65,5 +66,14 @@ public class  client_cautare_produse {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_main_page.fxml"));
         Stage stage = (Stage) tabelproduse.getScene().getWindow();
         stage.setScene(new Scene(root));
+    }
+
+    public void handleAdaugareCos() {
+        ObservableList<Produs> typesSelected;
+        typesSelected = tabelproduse.getSelectionModel().getSelectedItems();
+        for(Produs pr: typesSelected)
+        {
+            CartServices.add(pr);
+        }
     }
 }

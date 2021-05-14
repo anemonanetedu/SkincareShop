@@ -1,6 +1,7 @@
 package SKC.Controller;
 
 import SKC.Model.Produs;
+import SKC.Services.CartServices;
 import SKC.Services.ProduseService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,6 +14,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import org.dizitart.no2.Nitrite;
+import org.dizitart.no2.objects.ObjectRepository;
+
+import static SKC.Services.FileSystemService.getPathProdusToFile;
 
 public class client_afisare_produse {
 
@@ -29,10 +34,9 @@ public class client_afisare_produse {
         nume.setCellValueFactory(new PropertyValueFactory<>("nume"));
         pret.setCellValueFactory(new PropertyValueFactory<>("pret"));
         tippiele.setCellValueFactory(new PropertyValueFactory<>("tippiele"));
-
         tabelproduse.setItems(produse);
-
     }
+
 
     ObservableList<Produs> produse = FXCollections.observableArrayList(ProduseService.getProduse());
 
@@ -41,6 +45,9 @@ public class client_afisare_produse {
         Stage stage = (Stage) tabelproduse.getScene().getWindow();
         stage.setScene(new Scene(root));
     }
+
+
+
 
 
 }
