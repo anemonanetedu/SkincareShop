@@ -142,5 +142,8 @@ public class client_main_page {
 
 
     }
+
+    public void handleVizualizareCos() {
+    }
 }
 
