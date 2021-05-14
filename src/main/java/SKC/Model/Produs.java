@@ -16,6 +16,7 @@ public class Produs {
         this.tippiele = tippiele;
     }
 
+
     public String getNume() {
         return nume;
     }

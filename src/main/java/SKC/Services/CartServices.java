@@ -10,6 +10,8 @@ import SKC.Controller.client_afisare_produse;
 import static SKC.Services.FileSystemService.getPathProdusToFile;
 import SKC.Controller.client_afisare_produse;
 
+import java.util.ArrayList;
+
 public class CartServices {
     public static ObjectRepository<Produs> cartRepository;
 
@@ -29,6 +31,13 @@ public class CartServices {
         cartRepository.insert(produs);
     }
 
-
+    public static ArrayList<Produs> getProduse()
+    {
+        ArrayList<Produs> produse = new ArrayList<>();
+        for(Produs produs : cartRepository.find()) {
+            produse.add(produs);
+        }
+        return produse;
+    }
 
 }

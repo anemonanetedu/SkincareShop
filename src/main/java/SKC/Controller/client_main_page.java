@@ -1,15 +1,20 @@
 package SKC.Controller;
 
 //import com.sun.javafx.tk.quantum.PaintRenderJob;
+import SKC.Model.Produs;
 import SKC.Model.User;
+import SKC.Services.CartServices;
 import SKC.Services.ProduseService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 import javafx.scene.control.*;
 import javafx.collections.FXCollections;
@@ -23,7 +28,7 @@ public class client_main_page {
     @FXML
     private Button butonCreareCont;
     @FXML
-    private Button butonAlegereAngajat;
+    private Button butonVizualizareStatus;
     @FXML
     private Button butonDeconectare;
     @FXML
@@ -59,7 +64,7 @@ public class client_main_page {
     public void handleAlegereAngajat() throws IOException {
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientAlegereAngajat.fxml"));
-            Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+            Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -72,7 +77,7 @@ public class client_main_page {
     public void handleVizualizareListaServiciiSiPreturi(){
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_afisare_produse.fxml"));
-            Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+            Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -87,14 +92,14 @@ public class client_main_page {
     @FXML
     public void handleProduse()throws IOException{
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_afisare_produse.fxml"));
-        Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+        Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
         stage.setScene(new Scene(root));
     }
 
     public void handleAlegereOptiuneDorita() throws IOException {
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientAlegereOptiune.fxml"));
-            Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+            Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -143,7 +148,18 @@ public class client_main_page {
 
     }
 
-    public void handleVizualizareCos() {
+
+    public void handleVizualizareCos() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_afisare_cos.fxml"));
+        Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
+        stage.setScene(new Scene(root));
+
+    }
+
+    public void handleVizualizareStatus() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("vizualizare_status_comanda.fxml"));
+        Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
+        stage.setScene(new Scene(root));
     }
 }
 
