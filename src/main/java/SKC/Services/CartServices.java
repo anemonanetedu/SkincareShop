@@ -34,11 +34,10 @@ public class CartServices {
     public static ArrayList<Produs> getProduse()
     {
         ArrayList<Produs> produse = new ArrayList<>();
-        for(Produs produs : cartRepository.find())
+        for(Produs produs : cartRepository.find()) {
             produse.add(produs);
+        }
         return produse;
     }
-
-
 
 }

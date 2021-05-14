@@ -28,7 +28,7 @@ public class client_main_page {
     @FXML
     private Button butonCreareCont;
     @FXML
-    private Button butonAlegereAngajat;
+    private Button butonVizualizareStatus;
     @FXML
     private Button butonDeconectare;
     @FXML
@@ -64,7 +64,7 @@ public class client_main_page {
     public void handleAlegereAngajat() throws IOException {
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientAlegereAngajat.fxml"));
-            Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+            Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -77,7 +77,7 @@ public class client_main_page {
     public void handleVizualizareListaServiciiSiPreturi(){
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_afisare_produse.fxml"));
-            Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+            Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -92,14 +92,14 @@ public class client_main_page {
     @FXML
     public void handleProduse()throws IOException{
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_afisare_produse.fxml"));
-        Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+        Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
         stage.setScene(new Scene(root));
     }
 
     public void handleAlegereOptiuneDorita() throws IOException {
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientAlegereOptiune.fxml"));
-            Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+            Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -151,9 +151,15 @@ public class client_main_page {
 
     public void handleVizualizareCos() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_afisare_cos.fxml"));
-        Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
+        Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
         stage.setScene(new Scene(root));
 
+    }
+
+    public void handleVizualizareStatus() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("vizualizare_status_comanda.fxml"));
+        Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
+        stage.setScene(new Scene(root));
     }
 }
 

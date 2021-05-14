@@ -36,7 +36,7 @@
          <Font name="System Bold" size="12.0" />
      </font>
      </Button>
-        <Button fx:id="butonAlegereAngajat" alignment="CENTER" onAction="#handleAlegereAngajat" prefHeight="8.0" prefWidth="328.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare status comanda" textAlignment="CENTER" GridPane.rowIndex="7">
+        <Button fx:id="butonVizualizareStatus" alignment="CENTER" onAction="#handleVizualizareStatus" prefHeight="8.0" prefWidth="328.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare status comanda" textAlignment="CENTER" GridPane.rowIndex="7">
       <font>
          <Font name="System Bold" size="12.0" />
      </font>
