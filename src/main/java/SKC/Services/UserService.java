@@ -13,11 +13,13 @@ import SKC.Exception.UncompletedFieldsException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static SKC.Services.FileSystemService.getPathToFile;
+import static org.dizitart.no2.objects.filters.ObjectFilters.eq;
 
 public class UserService {
 
@@ -156,4 +158,11 @@ public class UserService {
     }
 
 
+    public static List<User> getAllUsers() {
+        return userRepository.find().toList();
+    }
+
+    public static void delete(String test_username) {
+        userRepository.remove(eq("username",test_username));
+    }
 }

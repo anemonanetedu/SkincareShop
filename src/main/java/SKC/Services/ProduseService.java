@@ -1,10 +1,6 @@
 package SKC.Services;
 
-import SKC.Exception.NoUpperCaseException;
-import SKC.Exception.UncompletedFieldsException;
-import SKC.Exception.UsernameAlreadyExistException;
 import SKC.Model.Produs;
-import SKC.Model.User;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import javafx.collections.ObservableList;
@@ -61,6 +57,10 @@ public class ProduseService {
             produse.add(produs);
         }
         return produse;
+    }
+
+    public static List<Produs> getAllProdus() {
+        return produsRepository.find().toList();
     }
 
 }
