@@ -26,8 +26,8 @@
       <bottom>
           <TableView fx:id="tabel_comenzi" prefHeight="307.0" prefWidth="540.0" BorderPane.alignment="BOTTOM_LEFT">
               <columns>
-                    <TableColumn fx:id="pret" minWidth="0.0" prefWidth="191.0" text="Pret" />
-                    <TableColumn fx:id="nume" prefWidth="204.0" text="Nume" />
+                    <TableColumn fx:id="pret" minWidth="0.0" prefWidth="0.0" text="Pret" />
+                    <TableColumn fx:id="nume" prefWidth="395.0" text="Nume" />
                  <TableColumn fx:id="tippiele" maxWidth="321.0" prefWidth="196.0" text="tippiele" />
                     
                 </columns>

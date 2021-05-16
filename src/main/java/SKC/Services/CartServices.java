@@ -7,6 +7,7 @@ import org.dizitart.no2.objects.ObjectRepository;
 import static SKC.Services.FileSystemService.getPathProdusToFile;
 import SKC.Controller.vizualizare_status_comanda;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CartServices {
     public static ObjectRepository<Produs> cartRepository;
@@ -32,6 +33,14 @@ public class CartServices {
             produse.add(produs);
         }
         return produse;
+    }
+
+    public static void close() {
+        cartRepository.close();
+    }
+
+    public static List<Produs> getAllProdus() {
+        return cartRepository.find().toList();
     }
 
 }
