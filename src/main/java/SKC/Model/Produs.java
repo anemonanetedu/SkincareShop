@@ -7,15 +7,14 @@ public class Produs {
     private String nume;
     private String pret;
     private String tippiele;
-
     public Produs(){}
+
 
     public Produs(String nume, String pret, String tippiele) {
         this.nume = nume;
         this.pret = pret;
         this.tippiele = tippiele;
     }
-
 
     public String getNume() {
         return nume;

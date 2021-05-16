@@ -2,6 +2,7 @@ package SKC.Controller;
 
 import SKC.Model.Produs;
 import SKC.Services.CartServices;
+import SKC.Services.ProduseService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,44 +10,48 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-public class vizualizare_status_comanda{
+public class acceptare_respingere_comanda {
     @FXML
-    private TableView<Produs> tabelproduse;
+    private Button afisare;
+    @FXML
+     private TableView<Produs> tabel_comenzi;
     @FXML
     private TableColumn<Produs, String> nume;
     @FXML
     private TableColumn<Produs, String> pret;
     @FXML
     private TableColumn<Produs, String> tippiele;
-    @FXML
-    private  Button status_comanda;
-
 
     public void initialize() {
         nume.setCellValueFactory(new PropertyValueFactory<>("nume"));
-        pret.setCellValueFactory(new PropertyValueFactory<>("pret"));
+        pret.setCellValueFactory(new PropertyValueFactory<>("price"));
         tippiele.setCellValueFactory(new PropertyValueFactory<>("tippiele"));
-        tabelproduse.setItems(produse);
+        tabel_comenzi.setItems(prod);
     }
 
-    ObservableList<Produs> produse = FXCollections.observableArrayList(CartServices.getProduse());
+    ObservableList<Produs> prod = FXCollections.observableArrayList(CartServices.getProduse());
+
+
 
 
     public void handleButonInapoi() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_main_page.fxml"));
-        Stage stage = (Stage) tabelproduse.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("admin_main_page.fxml"));
+        Stage stage = (Stage) tabel_comenzi.getScene().getWindow();
         stage.setScene(new Scene(root));
+
     }
 
+    public void onAccAction() {
+    }
 
-
+    public void onResAction() {
+    }
 
 }

@@ -61,18 +61,7 @@ public class client_main_page {
             System.out.println("eroare");
         }
     }
-    public void handleAlegereAngajat() throws IOException {
-        try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientAlegereAngajat.fxml"));
-            Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
-        }
-        catch (IOException e)
-        {
-            System.out.println("eroare");
-        }
-    }
+
 
     public void handleVizualizareListaServiciiSiPreturi(){
         try {
@@ -153,7 +142,6 @@ public class client_main_page {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_afisare_cos.fxml"));
         Stage stage = (Stage) (butonVizualizareStatus.getScene().getWindow());
         stage.setScene(new Scene(root));
-
     }
 
     public void handleVizualizareStatus() throws IOException {

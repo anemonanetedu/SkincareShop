@@ -6,11 +6,12 @@ public class User {
     @Id
     private String username;
     private String password;
-    private String name;
+    public String name;
     private String email;
     private String address;
     private String phone;
     private boolean admin=false;
+    private static String currentUser;
 
     public User() {
     }
@@ -97,4 +98,14 @@ public class User {
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
     }
+
+    public static String getCurrentUser()
+    {
+        return currentUser;
+    }
+
+    public static void setCurrentUser(String user){
+        currentUser=user;
+    }
+
 }

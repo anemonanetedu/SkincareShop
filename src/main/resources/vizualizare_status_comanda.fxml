@@ -37,7 +37,7 @@
             </Label>
         </top>
       <bottom>
-         <Button fx:id="status_comanda" mnemonicParsing="false" text="In curs de procesare" BorderPane.alignment="CENTER" />
+         <Button fx:id="status_comanda" mnemonicParsing="false" text="In curs de procesoare" BorderPane.alignment="CENTER" />
       </bottom>
     </BorderPane>
 </VBox>

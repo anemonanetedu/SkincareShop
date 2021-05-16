@@ -46,6 +46,10 @@ public class UserService {
 
     }
 
+    public static ObjectRepository<User> getUserRepository() {
+        return userRepository;
+    }
+
 
     private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistException {
         Cursor<User> cursor = userRepository.find();

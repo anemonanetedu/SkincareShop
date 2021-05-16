@@ -1,6 +1,7 @@
 package SKC.Controller;
 
 import SKC.Model.Produs;
+import SKC.Model.User;
 import SKC.Services.CartServices;
 import SKC.Services.ProduseService;
 import javafx.collections.FXCollections;
@@ -73,7 +74,7 @@ public class  client_cautare_produse {
         typesSelected = tabelproduse.getSelectionModel().getSelectedItems();
         for(Produs pr: typesSelected)
         {
-            CartServices.add(pr);
+            CartServices.addCos(pr);
         }
     }
 }
