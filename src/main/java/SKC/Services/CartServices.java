@@ -1,20 +1,15 @@
 package SKC.Services;
 
 import SKC.Model.Produs;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
-import SKC.Controller.client_afisare_produse;
 
 import static SKC.Services.FileSystemService.getPathProdusToFile;
-import SKC.Controller.client_afisare_produse;
-
+import SKC.Controller.vizualizare_status_comanda;
 import java.util.ArrayList;
 
 public class CartServices {
     public static ObjectRepository<Produs> cartRepository;
-
 
     public static void initProdusDatabase() {
         Nitrite database = Nitrite.builder()
@@ -25,10 +20,9 @@ public class CartServices {
 
     }
 
-    public static void add(Produs produs)
+    public static void addCos(Produs p)
     {
-
-        cartRepository.insert(produs);
+        cartRepository.insert(p);
     }
 
     public static ArrayList<Produs> getProduse()

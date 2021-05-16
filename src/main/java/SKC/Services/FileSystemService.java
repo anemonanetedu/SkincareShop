@@ -15,4 +15,9 @@ public class FileSystemService {
     public static final Path Produs_Home_Path = Paths.get(Produs_FOLDER,APPLICATION_FOLDER);
     public static Path getPathProdusToFile(String... path){return Produs_Home_Path.resolve(Paths.get(".",path));}
 
+    private static final String Comanda_FOLDER = System.getProperty("Comanda.home");
+    public static final Path Comanga_Home_Path = Paths.get(Comanda_FOLDER,APPLICATION_FOLDER);
+    public static Path getPathComandaToFile(String... path){return Comanga_Home_Path.resolve(Paths.get(".",path));}
+
+
 }

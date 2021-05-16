@@ -27,7 +27,8 @@ public class vizualizare_status_comanda{
     @FXML
     private TableColumn<Produs, String> tippiele;
     @FXML
-    private Button status_comanda;
+    private  Button status_comanda;
+
 
     public void initialize() {
         nume.setCellValueFactory(new PropertyValueFactory<>("nume"));
@@ -39,12 +40,13 @@ public class vizualizare_status_comanda{
     ObservableList<Produs> produse = FXCollections.observableArrayList(CartServices.getProduse());
 
 
-
-
     public void handleButonInapoi() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_main_page.fxml"));
         Stage stage = (Stage) tabelproduse.getScene().getWindow();
         stage.setScene(new Scene(root));
-
     }
+
+
+
+
 }

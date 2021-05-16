@@ -57,8 +57,9 @@ public class ProduseService {
 
     public static ArrayList<Produs> getProduse(){
         ArrayList<Produs> produse = new ArrayList<>();
-        for(Produs produs : produsRepository.find())
+        for(Produs produs : produsRepository.find()) {
             produse.add(produs);
+        }
         return produse;
     }
 

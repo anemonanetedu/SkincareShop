@@ -4,13 +4,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 
 <VBox prefHeight="490.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SKC.Controller.client_afisare_cos">
-    <Button onAction="#handleButonInapoi" mnemonicParsing="false" text="Inapoi">
+    <Button mnemonicParsing="false" onAction="#handleButonInapoi" text="Inapoi">
         <VBox.margin>
-            <Insets top="20.0" left="20.0"/>
+            <Insets left="20.0" top="20.0" />
         </VBox.margin>
     </Button>
 
@@ -20,7 +18,7 @@
                 <columns>
                     <TableColumn fx:id="nume" prefWidth="208.3" text="Nume" />
                     <TableColumn fx:id="pret" prefWidth="208.3" text="Pret" />
-                    <TableColumn fx:id="tippiele" prefWidth="208.3" text="Tip piele"/>
+                    <TableColumn fx:id="tippiele" prefWidth="208.3" text="Tip piele" />
                 </columns>
             </TableView>
         </center>

@@ -1,17 +1,25 @@
 package SKC.Controller;
 
+import SKC.Model.Produs;
 import SKC.Model.User;
 //import com.sun.javafx.tk.quantum.PaintRenderJob;
+import SKC.Services.CartServices;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 
 public class admin_main_page {
@@ -33,7 +41,6 @@ public class admin_main_page {
     private Button buttonCreate;
     @FXML
     private Text registrationMessage;
-
 
 
     private  String userName;
@@ -69,16 +76,9 @@ public class admin_main_page {
         }
     }
     public void handleAcceptareRespingereComanda() throws IOException {
-        try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("acceptarerespingereprogramare.fxml"));
-            Stage stage = (Stage) (AcceptareRespingereComanda.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
-        }
-        catch (IOException e)
-        {
-            System.out.println("eroare");
-        }
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("acceptare_respingere_comanda.fxml"));
+        Stage stage = (Stage) butonDeconectare.getScene().getWindow();
+        stage.setScene(new Scene(root));
     }
     
     public void handleAdaugaProduse() throws IOException{
@@ -127,5 +127,7 @@ public class admin_main_page {
 
 
         }
-    }
+
+
+}
 

@@ -1,5 +1,6 @@
 package SKC.Controller;
 
+import SKC.Model.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,8 +13,10 @@ import SKC.Exception.IncorrectPasswordException;
 import SKC.Exception.InvalidUsernameException;
 import SKC.Services.UserService;
 import javafx.scene.control.TextField;
+import org.dizitart.no2.objects.ObjectRepository;
 
 import java.io.IOException;
+import java.util.Objects;
 //import java.awt.*;
 
 public class LoginController {
@@ -83,6 +86,23 @@ public class LoginController {
         }
 
     }
+    private static ObjectRepository<User> userRepository;
+
+    public String getUsername()
+    {
+        String s="";
+        userRepository = UserService.getUserRepository();
+        for(User u:userRepository.find())
+        {
+            if(Objects.equals(u.getUsername(),String.valueOf(usernameField.getText())))
+            {
+                s = u.getUsername();
+            }
+        }
+        return s;
+    }
+
+
 
 
 }

@@ -36,28 +36,28 @@ public class RegistrationController {
 
     public void handleRegisterAction() {
 
-        try{
-            UserService.addUser(usernameField.getText(), passwordField.getText(),nameField.getText(),emailField.getText(),addressField.getText(),phoneField.getText());
+        try {
+            UserService.addUser(usernameField.getText(), passwordField.getText(), nameField.getText(), emailField.getText(), addressField.getText(), phoneField.getText());
             registrationMessage.setText("Account created successfully!");
             handleLogAction();
-        }catch(UncompletedFieldsException e){
+        } catch (UncompletedFieldsException e) {
             registrationMessage.setText(e.getMessage());
-        }catch(UsernameAlreadyExistException ee)
-        {
+        } catch (UsernameAlreadyExistException ee) {
             registrationMessage.setText(ee.getMessage());
-        }catch(NoUpperCaseException eee)
-        {
+        } catch (NoUpperCaseException eee) {
             registrationMessage.setText(eee.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
+
     public void handleLogAction() throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
-        Stage scene= (Stage) logButton.getScene().getWindow();
-        scene.setScene(new Scene(root,720,490));
+        Stage scene = (Stage) logButton.getScene().getWindow();
+        scene.setScene(new Scene(root, 720, 490));
         scene.setFullScreen(false);
     }
+
 }
+
+
